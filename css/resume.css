@@ -14,10 +14,6 @@
     src: url("sweetHipster.ttf");
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
 
 /* --------------------------------------------
   Header 
@@ -38,12 +34,12 @@
   right: 0;
   background: url("../imgs/studybiscuit.jpg");
   background-size:cover;
-  background-position: 60% 50%;
-  -webkit-filter: blur(7px);
-  -moz-filter: blur(7px);
-  -o-filter: blur(7px);
-  -ms-filter: blur(7px);
-  filter: blur(7px);
+  background-position: 20% 30%;
+  -webkit-filter: blur(4px);
+  -moz-filter: blur(4px);
+  -o-filter: blur(4px);
+  -ms-filter: blur(4px);
+  filter: blur(4px);
   z-index: 0;
 }
 
@@ -53,6 +49,9 @@
 }
 
 .myHeaderText {
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
   background-color: rgb(0,0,0); 
   background-color: rgba(0,0,0, 0.4);
   border-radius: 1rem;
@@ -61,8 +60,9 @@
   border: 3px solid #f1f1f1;
   width: 80%;
   height: 80%;
-
+  padding-left: 2rem;
   z-index: 100;
+  
 }
 
 
@@ -92,7 +92,7 @@
  
 #myBtn  {
   font-size: 2rem;
-  width: 20rem;
+  width: 15rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -100,7 +100,6 @@
 .btn:hover {
     color:#D95A42;
     background-color:#C7C3C1;
-  
   }
   
 .btn:focus {
@@ -149,9 +148,71 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top:.2rem; 
-  width: 50%;
+  margin-top:.5rem; 
+  width: 10rem;
+  height: 10rem;
 }
+
+.card-header {
+  background-color: transparent;
+  color: #D95A42;
+  font-size: 2rem;
+}
+ .text {
+   text-align: justify;
+ }
+
+ ul {
+  padding: 0;
+
+}
+
+
+/* --------------------------------------------
+  About Carousel
+-------------------------------------------- */
+ 
+ .scene {
+   position: relative;
+   width: 12rem;
+   height: 18rem;
+   margin:0px auto 100px;
+   perspective: 1000px;
+ }
+ 
+ .carousel {
+   width: 100%;
+   height: 100%;
+   position: absolute;
+   transform: translateZ(-8.3rem);
+   transform-style: preserve-3d;
+   transition: transform 2.5s;
+ }
+ 
+ .carousel__cell {
+   position: absolute;
+   width: 12rem;
+   height: 22rem;
+   top: 10px;
+   border: 3px solid rgba(136, 136, 136, 0.767);
+   font-size: 1rem;
+   text-align: center;
+   padding: 5px;
+   border-radius: 25px;
+ }
+ 
+ .carousel__cell:nth-child(9n+1) { background:#BC3E44; color:whitesmoke; }
+ .carousel__cell:nth-child(9n+2) { background:rgb(192, 82, 87); color:whitesmoke;}
+ .carousel__cell:nth-child(9n+3) { background:rgb(192, 98, 103); color: whitesmoke;}
+ .carousel__cell:nth-child(9n+4) { background:#9E775A; color:whitesmoke; }
+ .carousel__cell:nth-child(9n+5) { background:rgb(119, 83, 56); color:whitesmoke;}
+ 
+ 
+ .carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(8.3rem); }
+ .carousel__cell:nth-child(2) { transform: rotateY( 72deg) translateZ(8.3rem); }
+ .carousel__cell:nth-child(3) { transform: rotateY(144deg) translateZ(8.3rem); }
+ .carousel__cell:nth-child(4) { transform: rotateY(216deg) translateZ(8.3rem); }
+ .carousel__cell:nth-child(5) { transform: rotateY(288deg) translateZ(8.3rem); }
 
 /* --------------------------------------------
   Skills
@@ -161,6 +222,7 @@
   width: 100%; /* Full width */
   background-color: #ddd; /* Grey background */
   border-radius: 25px;
+  margin-bottom:2rem;
 }
 
 .skills {
@@ -170,10 +232,16 @@
   color: white; /* White text color */
 }
 
-.html {width: 90%; background-color: #4CAF50; border-top-left-radius: 25px; border-bottom-left-radius: 25px; } /* Green */
-.css {width: 80%; background-color: #2196F3; border-top-left-radius: 25px; border-bottom-left-radius: 25px; } /* Blue */
-.js {width: 65%; background-color: #f44336; border-top-left-radius: 25px; border-bottom-left-radius: 25px; } /* Red */
-.php {width: 60%; background-color: #808080; border-top-left-radius: 25px; border-bottom-left-radius: 25px; } /* Dark Grey */
+.office {width: 100%; background-color:#D95A42; border-radius:25px; }
+.customerservice {width: 100%; background-color:#D95A42; border-radius:25px; }
+.publicspeaking {width: 100%; background-color:#D95A42; border-radius:25px; }
+.socialmedia {width: 100%; background-color:#D95A42; border-radius:25px; }
+.eventplanning {width: 85%; background-color:#D95A42; border-top-left-radius: 25px; border-bottom-left-radius: 25px; }
+.traininganddevelopement {width: 75%; background-color:#D95A42; border-top-left-radius: 25px; border-bottom-left-radius: 25px; }
+.htmls {width: 65%; background-color:#D95A42; border-top-left-radius: 25px; border-bottom-left-radius: 25px; }
+.css {width: 65%; background-color:#D95A42; border-top-left-radius: 25px; border-bottom-left-radius: 25px; }
+.javascript {width: 65%; background-color:#D95A42; border-top-left-radius: 25px; border-bottom-left-radius: 25px; }
+.adobecreativesuite {width: 65%; background-color:#D95A42; border-top-left-radius: 25px; border-bottom-left-radius: 25px; }
 
 
 /* --------------------------------------------
@@ -242,8 +310,7 @@
 }
 
 .bg {
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0, 0.2);
+  border: 8px solid #9E775A;
 }
 
 /* --------------------------------------------
@@ -251,19 +318,29 @@
 -------------------------------------------- */
 
 footer {
-  position: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+  text-align: center;
   font-size: 1rem;
-  background-color: #9E775A;
+  font-weight: bold;
+  background-color: rgb(95, 95, 95);
   color: whitesmoke;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
+  line-height: 2.5rem;
 }
 
 footer a {
   color: whitesmoke;
 }
 
+footer a:hover,
+footer a:focus {
+  color: #aaa;
+}
+
 img[src*= "pdf"] {
-  float: left;
   height: 30px;
   width: 30px;
   border-radius: 50%;
@@ -281,6 +358,7 @@ img[src*= "pdf"] {
 
   .myHeaderText {
     text-align: center;
+    padding-left: 0;
   }
 
   footer {
@@ -292,16 +370,39 @@ img[src*= "pdf"] {
     float: right;
   }
 
+  footer a,
+  img[src*= "pdf"] {
+    float: left;
+  }
+
   .modal-content {
     width: 60%; /* Could be more or less, depending on screen size */
   }
 
+  .scene {
+    width: 20rem;
+    height: 18rem;
+    margin: 20px auto;
 
+  }
+  
+  .carousel {
+    transform: translateZ(-14.5rem);
+    transform-style: preserve-3d;
+    transition: transform 2.5s;
+  }
+  
+  .carousel__cell {
+    width: 20rem;
+    height: 16rem;
+  }
+  
+  .carousel__cell:nth-child(1) { transform: rotateY(  0deg) translateZ(14.5rem); }
+  .carousel__cell:nth-child(2) { transform: rotateY( 72deg) translateZ(14.5rem); }
+  .carousel__cell:nth-child(3) { transform: rotateY(144deg) translateZ(14.5rem); }
+  .carousel__cell:nth-child(4) { transform: rotateY(216deg) translateZ(14.5rem); }
+  .carousel__cell:nth-child(5) { transform: rotateY(288deg) translateZ(14.5rem); }
+ 
 
 
 }
-
-@media only screen and (min-height: 673px) {
-
-}
-

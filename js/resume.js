@@ -30,3 +30,24 @@ $('a[href*="http"]').click(function(e) {
   window.open(documentUrl, '_blank'); 
 });
 
+// carousel in about section
+var carousel = document.querySelector('.carousel');
+var cellCount = 5;
+var selectedIndex = 0;
+
+function rotateCarousel() {
+  var angle = selectedIndex / cellCount * -360;
+  carousel.style.transform = 'translateZ(-9.64rem) rotateY(' + angle + 'deg)';
+}
+
+var prevButton = document.querySelector('.previous-button');
+prevButton.addEventListener( 'click', function() {
+  selectedIndex--;
+  rotateCarousel();
+});
+
+var nextButton = document.querySelector('.next-button');
+nextButton.addEventListener( 'click', function() {
+  selectedIndex++;
+  rotateCarousel();
+});
